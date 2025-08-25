@@ -27,3 +27,6 @@ dist-ssr
 
 # bolt 
 .bolt 
+
+# histoy 
+.history

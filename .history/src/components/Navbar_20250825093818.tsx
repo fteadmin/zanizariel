@@ -40,11 +40,7 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <a href="#home" className="flex items-center space-x-2">
-          <img 
-            src="/assets/logo-light.png" 
-            alt="Zariel & Co Logo" 
-            className="h-10 w-auto" 
-          />
+          <ZarielLogo className="h-10 w-auto" />
           <span className="text-xl font-bold tracking-tight dark:text-white">
             Zariel & Co
           </span>
