@@ -22,8 +22,6 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
@@ -33,8 +31,6 @@ const Contact: React.FC = () => {
         subject: '',
         message: ''
       });
-      
-      // Reset success message after 5 seconds
       setTimeout(() => {
         setSubmitted(false);
       }, 5000);
@@ -42,24 +38,24 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
+    <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black dark:text-white">Get in Touch</h2>
-          <p className="text-gray-600 dark:text-gray-300 text-lg">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#6A7B92' }}>Get in Touch</h2>
+          <p className="text-lg" style={{ color: '#6A7B92' }}>
             Ready to collaborate or have questions? We'd love to hear from you.
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 bg-gray-50 dark:bg-gray-800 rounded-xl p-8">
+          <div className="lg:col-span-2 bg-white rounded-xl p-8 border border-[#6A7B92]">
             {submitted ? (
               <div className="flex flex-col items-center justify-center h-full py-12">
-                <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mb-4">
-                  <Send className="h-8 w-8 text-green-600 dark:text-green-400" />
+                <div className="w-16 h-16 bg-[#A7D129] rounded-full flex items-center justify-center mb-4">
+                  <Send className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2 text-black dark:text-white">Message Sent!</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-center max-w-md">
+                <h3 className="text-2xl font-bold mb-2" style={{ color: '#6A7B92' }}>Message Sent!</h3>
+                <p className="text-center max-w-md" style={{ color: '#6A7B92' }}>
                   Thank you for reaching out. We'll get back to you as soon as possible.
                 </p>
               </div>
@@ -67,7 +63,7 @@ const Contact: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
+                    <label htmlFor="name" className="block text-sm font-medium mb-1" style={{ color: '#6A7B92' }}>Name</label>
                     <input
                       id="name"
                       name="name"
@@ -75,11 +71,11 @@ const Contact: React.FC = () => {
                       required
                       value={formState.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent"
+                      className="w-full px-4 py-3 rounded-lg border border-[#6A7B92] bg-white text-[#6A7B92] focus:ring-2 focus:ring-[#A7D129] focus:border-transparent"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                    <label htmlFor="email" className="block text-sm font-medium mb-1" style={{ color: '#6A7B92' }}>Email</label>
                     <input
                       id="email"
                       name="email"
@@ -87,20 +83,20 @@ const Contact: React.FC = () => {
                       required
                       value={formState.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent"
+                      className="w-full px-4 py-3 rounded-lg border border-[#6A7B92] bg-white text-[#6A7B92] focus:ring-2 focus:ring-[#A7D129] focus:border-transparent"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
+                  <label htmlFor="subject" className="block text-sm font-medium mb-1" style={{ color: '#6A7B92' }}>Subject</label>
                   <select
                     id="subject"
                     name="subject"
                     required
                     value={formState.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-[#6A7B92] bg-white text-[#6A7B92] focus:ring-2 focus:ring-[#A7D129] focus:border-transparent"
                   >
                     <option value="">Select a subject</option>
                     <option value="collaboration">Collaboration Opportunity</option>
@@ -112,7 +108,7 @@ const Contact: React.FC = () => {
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+                  <label htmlFor="message" className="block text-sm font-medium mb-1" style={{ color: '#6A7B92' }}>Message</label>
                   <textarea
                     id="message"
                     name="message"
@@ -120,7 +116,7 @@ const Contact: React.FC = () => {
                     rows={6}
                     value={formState.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-[#6A7B92] bg-white text-[#6A7B92] focus:ring-2 focus:ring-[#A7D129] focus:border-transparent resize-none"
                   ></textarea>
                 </div>
                 
@@ -128,12 +124,24 @@ const Contact: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`px-8 py-3 bg-black text-white dark:bg-white dark:text-black rounded-full font-semibold hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors flex items-center justify-center ${
+                    className={`px-8 py-3 rounded-full font-semibold transition-colors flex items-center justify-center ${
                       isSubmitting ? "opacity-75 cursor-not-allowed" : ""
                     }`}
+                    style={{
+                      backgroundColor: '#6A7B92',
+                      color: '#FFFFFF'
+                    }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.backgroundColor = '#A7D129';
+                      e.currentTarget.style.color = '#6A7B92';
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.backgroundColor = '#6A7B92';
+                      e.currentTarget.style.color = '#FFFFFF';
+                    }}
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
-                    <Send className="ml-2 h-4 w-4" />
+                    <Send className="ml-2 h-4 w-4" style={{ color: '#A7D129' }} />
                   </button>
                 </div>
               </form>
@@ -141,16 +149,16 @@ const Contact: React.FC = () => {
           </div>
           
           <div className="space-y-8">
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8">
+            <div className="bg-white rounded-xl p-8 border border-[#6A7B92]">
               <div className="flex items-start">
                 <div className="mr-4">
-                  <div className="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center">
-                    <MapPin className="h-6 w-6 text-black dark:text-white" />
+                  <div className="w-12 h-12 bg-[#A7D129] rounded-full flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-white" />
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-black dark:text-white">Our Location</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#6A7B92' }}>Our Location</h3>
+                  <p style={{ color: '#6A7B92' }}>
                     1234 Media Avenue<br />
                     Creative District<br />
                     Los Angeles, CA 90001
@@ -159,16 +167,16 @@ const Contact: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8">
+            <div className="bg-white rounded-xl p-8 border border-[#6A7B92]">
               <div className="flex items-start">
                 <div className="mr-4">
-                  <div className="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-black dark:text-white" />
+                  <div className="w-12 h-12 bg-[#A7D129] rounded-full flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-white" />
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-black dark:text-white">Email Us</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#6A7B92' }}>Email Us</h3>
+                  <p style={{ color: '#6A7B92' }}>
                     info@zarielandco.com<br />
                     support@zarielandco.com
                   </p>
@@ -176,16 +184,16 @@ const Contact: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8">
+            <div className="bg-white rounded-xl p-8 border border-[#6A7B92]">
               <div className="flex items-start">
                 <div className="mr-4">
-                  <div className="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-black dark:text-white" />
+                  <div className="w-12 h-12 bg-[#A7D129] rounded-full flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-white" />
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-black dark:text-white">Call Us</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#6A7B92' }}>Call Us</h3>
+                  <p style={{ color: '#6A7B92' }}>
                     +1 (555) 123-4567<br />
                     +1 (555) 987-6543
                   </p>

@@ -4,6 +4,11 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        white: '#FFFFFF',
+        slateblue: '#6A7B92',
+        limegreen: '#A7D129',
+      },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
