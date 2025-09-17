@@ -1,5 +1,5 @@
 import React from 'react';
-import { Film, Radio, PenTool, ShoppingBag, Users, MonitorPlay } from 'lucide-react';
+import { Film, Users, PenTool, Megaphone } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
@@ -9,29 +9,14 @@ const Services: React.FC = () => {
       description: "From concept to final cut, our team delivers professional video content that captures your vision.",
     },
     {
-      icon: <Radio className="h-8 w-8" style={{ color: '#6A7B92' }} />,
-      title: "Podcast Creation",
-      description: "Full-service podcast production, including recording, editing, and distribution strategies.",
-    },
-    {
-      icon: <PenTool className="h-8 w-8" style={{ color: '#6A7B92' }} />,
-      title: "Creative Development",
-      description: "Turn your ideas into reality with our creative development and storytelling expertise.",
-    },
-    {
-      icon: <ShoppingBag className="h-8 w-8" style={{ color: '#6A7B92' }} />,
-      title: "Digital Commerce",
-      description: "Our platform connects creators with audiences through seamless digital commerce solutions.",
+      icon: <Megaphone className="h-8 w-8" style={{ color: '#6A7D129' }} />,
+      title: "Branding & Marketing",
+      description: "We help you build a memorable brand and execute marketing strategies that grow your audience and impact.",
     },
     {
       icon: <Users className="h-8 w-8" style={{ color: '#6A7B92' }} />,
       title: "Community Building",
       description: "Strategies and tools to build and nurture engaged communities around your content.",
-    },
-    {
-      icon: <MonitorPlay className="h-8 w-8" style={{ color: '#6A7B92' }} />,
-      title: "Digital Distribution",
-      description: "Get your content in front of the right audiences with our distribution expertise.",
     }
   ];
 
