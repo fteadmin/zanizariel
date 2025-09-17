@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import SmoothScroll from './components/SmoothScroll';
 import HeroSlideshow from './components/HeroSlideShow';
 
+
 function App() {
   useEffect(() => {
     // Update document title
