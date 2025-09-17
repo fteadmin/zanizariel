@@ -1,5 +1,5 @@
 import React from 'react';
-import { Film, Users, PenTool, Megaphone } from 'lucide-react';
+import { Film, Users, Megaphone } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
