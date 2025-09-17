@@ -39,7 +39,7 @@ const About: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold mb-4" style={{ color: '#6A7B92' }}>Driving Innovation</h3>
             <p style={{ color: '#6A7B92' }}>
-              We believe that innovation is the key to unlocking new opportunities in the media industry. That's why we're committed to providing our members with the tools and resources they need to turn their ideas into reality.
+              We believe that innovation is the key to unlocking new opportunities in the media industry.
             </p>
           </div>
         </div>
@@ -64,22 +64,22 @@ const About: React.FC = () => {
               </div>
               
               <div className="md:w-1/2 grid grid-cols-2 gap-4">
-                <div className="bg-white p-6 rounded-lg border border-[#A7D129]">
+                {/* <div className="bg-white p-6 rounded-lg border border-[#A7D129]">
                   <p className="text-4xl font-bold mb-2" style={{ color: '#A7D129' }}>100+</p>
                   <p style={{ color: '#6A7B92' }}>Active Creators</p>
-                </div>
-                <div className="bg-white p-6 rounded-lg border border-[#A7D129]">
+                </div> */}
+                {/* <div className="bg-white p-6 rounded-lg border border-[#A7D129]">
                   <p className="text-4xl font-bold mb-2" style={{ color: '#A7D129' }}>50+</p>
                   <p style={{ color: '#6A7B92' }}>Projects Completed</p>
-                </div>
-                <div className="bg-white p-6 rounded-lg border border-[#A7D129]">
+                </div> */}
+                {/* <div className="bg-white p-6 rounded-lg border border-[#A7D129]">
                   <p className="text-4xl font-bold mb-2" style={{ color: '#A7D129' }}>15+</p>
                   <p style={{ color: '#6A7B92' }}>Industry Partners</p>
-                </div>
-                <div className="bg-white p-6 rounded-lg border border-[#A7D129]">
+                </div> */}
+                {/* <div className="bg-white p-6 rounded-lg border border-[#A7D129]">
                   <p className="text-4xl font-bold mb-2" style={{ color: '#A7D129' }}>3</p>
                   <p style={{ color: '#6A7B92' }}>Offices Worldwide</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
