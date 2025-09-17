@@ -9,6 +9,11 @@ const Hero: React.FC = () => {
     >
       <div className="container mx-auto px-4 py-16 md:py-24 text-center">
         <div className="max-w-4xl mx-auto">
+          {/* Tagline */}
+          <p className="text-lg md:text-xl mb-6 font-medium" style={{ color: '#6A7B92' }}>
+            Reshaping the media landscape through innovation, collaboration, and community.
+          </p>
+          {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
               style={{ color: '#6A7B92' }}>
             <span className="relative">
@@ -19,14 +24,14 @@ const Hero: React.FC = () => {
               ></span>
             </span>
           </h1>
-          
+          {/* Subhead */}
           <p
             className="text-lg md:text-xl my-6 mx-auto max-w-3xl"
             style={{ color: '#6A7B92' }}
           >
             A 2-year creator incubator that turns your talent into a business—real tools, real ownership, real money.
           </p>
-          
+          {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
             <a 
               href="#apply" 
