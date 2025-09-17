@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight, Users, TrendingUp, Award } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const HeroSlideshow: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -19,11 +19,6 @@ const HeroSlideshow: React.FC = () => {
         text: "Join Us",
         href: "#contact"
       },
-      features: [
-        { icon: <Users className="h-5 w-5" />, text: "Member profit sharing that rewards contribution" },
-        { icon: <TrendingUp className="h-5 w-5" />, text: "Our own platform for digital commerce" },
-        { icon: <Award className="h-5 w-5" />, text: "Comprehensive support for creators" }
-      ],
       background: "bg-white"
     },
     {
@@ -39,11 +34,6 @@ const HeroSlideshow: React.FC = () => {
         text: "Take the 2-Minute Quiz",
         href: "#quiz"
       },
-      features: [
-        { icon: <Award className="h-5 w-5" />, text: "2-year comprehensive incubator program" },
-        { icon: <TrendingUp className="h-5 w-5" />, text: "Turn your talent into sustainable income" },
-        { icon: <Users className="h-5 w-5" />, text: "Real tools, real ownership, real money" }
-      ],
       background: "bg-white"
     }
   ];
@@ -134,15 +124,6 @@ const HeroSlideshow: React.FC = () => {
                 >
                   {slides[currentSlide].secondaryButton.text}
                 </a>
-              </div>
-              {/* Features */}
-              <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
-                {slides[currentSlide].features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center gap-2 px-4 py-2 bg-[#F7F7F7] rounded-full border border-[#A7D129] text-[#6A7B92] font-medium">
-                    {feature.icon}
-                    <span>{feature.text}</span>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
