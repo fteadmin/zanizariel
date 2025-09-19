@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
             className="h-10 w-auto" 
           />
           <span className="text-xl font-bold tracking-tight text-[color:#6A7B92]">
-            Zariel & Co 
+            Zariel & Co Multimedia Partners
           </span>
         </a>
 
