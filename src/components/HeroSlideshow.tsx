@@ -23,8 +23,8 @@ const HeroSlideshow: React.FC = () => {
     },
     {
       id: 2,
-      title: "No More",
-      highlight: "Struggling Artists",
+      title: "Booked",
+      highlight: "&  Busy",
       description: "A 2-year creator incubator that turns your talent into a business—real tools, real ownership, real money.",
       primaryButton: {
         text: "Apply Now",
