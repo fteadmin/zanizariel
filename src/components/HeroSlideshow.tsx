@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, Users, TrendingUp, Award } from 'lucide-react';
 
 const HeroSlideshow: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -19,12 +19,21 @@ const HeroSlideshow: React.FC = () => {
         text: "Join Us",
         href: "#contact"
       },
+      backgroundImage: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2",
+      videoUrl: "https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4",
+      background: "bg-white",
+      backgroundImage: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2",
+      features: [
+        { icon: <Users className="h-5 w-5" />, text: "Member profit sharing that rewards contribution" },
+        { icon: <TrendingUp className="h-5 w-5" />, text: "Our own platform for digital commerce" },
+        { icon: <Award className="h-5 w-5" />, text: "Comprehensive support for creators" }
+      ],
       background: "bg-white"
     },
     {
       id: 2,
       title: "Booked",
-      highlight: "&  Busy",
+      highlight: "& Busy",
       description: "A 2-year creator incubator that turns your talent into a business—real tools, real ownership, real money.",
       primaryButton: {
         text: "Apply Now",
@@ -34,6 +43,15 @@ const HeroSlideshow: React.FC = () => {
         text: "Take the 2-Minute Quiz",
         href: "#quiz"
       },
+      backgroundImage: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2",
+      videoUrl: "https://videos.pexels.com/video-files/3209828/3209828-uhd_2560_1440_25fps.mp4",
+      background: "bg-white",
+      backgroundImage: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2",
+      features: [
+        { icon: <Award className="h-5 w-5" />, text: "2-year comprehensive incubator program" },
+        { icon: <TrendingUp className="h-5 w-5" />, text: "Turn your talent into sustainable income" },
+        { icon: <Users className="h-5 w-5" />, text: "Real tools, real ownership, real money" }
+      ],
       background: "bg-white"
     }
   ];
@@ -66,9 +84,39 @@ const HeroSlideshow: React.FC = () => {
   return (
     <section 
       id="home" 
-      className={`min-h-screen flex items-center justify-center pt-20 ${slides[currentSlide].background} relative overflow-hidden`}
+      className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(${slides[currentSlide].backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        transition: 'background-image 0.7s ease-in-out'
+      }}
     >
-      <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+    {/* Background Video */}
+    <div className="absolute inset-0 overflow-hidden">
+      <video
+        key={currentSlide}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+        style={{ zIndex: 1 }}
+      >
+        <source src={slides[currentSlide].videoUrl} type="video/mp4" />
+      </video>
+      {/* Video Overlay */}
+      <div 
+        className="absolute inset-0 transition-opacity duration-700"
+        style={{ 
+          backgroundColor: 'rgba(255, 255, 255, 0.85)',
+          zIndex: 2
+        }}
+      />
+    </div>
+
+      <div className="container mx-auto px-4 py-16 md:py-24 relative z-10" style={{ zIndex: 10 }}>
         <div className="flex items-center justify-center min-h-[600px]">
           <div className="max-w-4xl mx-auto text-center">
             <div className="transition-all duration-700 ease-in-out">

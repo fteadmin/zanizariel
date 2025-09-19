@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 // import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
-import Scripted from './components/Scripted';
+// import Scripted from './components/Scripted';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SmoothScroll from './components/SmoothScroll';
@@ -28,7 +28,7 @@ function App() {
           {/* <Hero /> */}
           <About />
           <Services />
-          <Scripted />
+          {/* <Scripted /> */}
           <Contact />
         </main>
         <Footer />
