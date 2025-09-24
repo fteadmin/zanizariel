@@ -176,10 +176,13 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2" style={{ color: '#6A7B92' }}>Email Us</h3>
-                  <p style={{ color: '#6A7B92' }}>
-                    info@zarielandco.com<br />
-                    support@zarielandco.com
-                  </p>
+                  <a 
+                    href="mailto:info@zaniyazariel.com" 
+                    className="text-[#6A7B92] hover:text-[#A7D129] transition-colors duration-300 underline-offset-2 hover:underline"
+                    style={{ cursor: 'pointer' }}
+                  >
+                    info@zaniyazariel.com
+                  </a>
                 </div>
               </div>
             </div>
