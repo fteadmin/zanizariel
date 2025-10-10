@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 // import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
+import MembershipContent from './components/MembershipContent';
 // import Scripted from './components/Scripted';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -27,6 +28,7 @@ function App() {
           <HeroSlideshow />
           {/* <Hero /> */}
           <About />
+           <MembershipContent />
           <Services />
           {/* <Scripted /> */}
           <Contact />
