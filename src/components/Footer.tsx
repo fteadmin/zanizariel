@@ -57,14 +57,14 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4" style={{ color: '#6A7B92' }}>Company</h3>
             <ul className="space-y-2">
               <li><a href="#about" className="transition-colors" style={{ color: '#6A7B92' }} onMouseEnter={e => (e.currentTarget.style.color = '#A7D129')} onMouseLeave={e => (e.currentTarget.style.color = '#6A7B92')}>About Us</a></li>
+              <li><a href="#membership" className="transition-colors" style={{ color: '#6A7B92' }} onMouseEnter={e => (e.currentTarget.style.color = '#A7D129')} onMouseLeave={e => (e.currentTarget.style.color = '#6A7B92')}>Membership</a></li>
               <li><a href="#services" className="transition-colors" style={{ color: '#6A7B92' }} onMouseEnter={e => (e.currentTarget.style.color = '#A7D129')} onMouseLeave={e => (e.currentTarget.style.color = '#6A7B92')}>Our Services</a></li>
-              <li><a href="#" className="transition-colors" style={{ color: '#6A7B92' }} onMouseEnter={e => (e.currentTarget.style.color = '#A7D129')} onMouseLeave={e => (e.currentTarget.style.color = '#6A7B92')}>Careers</a></li>
-              <li><a href="#" className="transition-colors" style={{ color: '#6A7B92' }} onMouseEnter={e => (e.currentTarget.style.color = '#A7D129')} onMouseLeave={e => (e.currentTarget.style.color = '#6A7B92')}>Press</a></li>
-              <li><a href="#" className="transition-colors" style={{ color: '#6A7B92' }} onMouseEnter={e => (e.currentTarget.style.color = '#A7D129')} onMouseLeave={e => (e.currentTarget.style.color = '#6A7B92')}>Blog</a></li>
+              {/* <li><a href="#" className="transition-colors" style={{ color: '#6A7B92' }} onMouseEnter={e => (e.currentTarget.style.color = '#A7D129')} onMouseLeave={e => (e.currentTarget.style.color = '#6A7B92')}>Careers</a></li> */}
+              {/* <li><a href="#" className="transition-colors" style={{ color: '#6A7B92' }} onMouseEnter={e => (e.currentTarget.style.color = '#A7D129')} onMouseLeave={e => (e.currentTarget.style.color = '#6A7B92')}>Blog</a></li> */}
             </ul>
           </div>
           
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold mb-4" style={{ color: '#6A7B92' }}>Resources</h3>
             <ul className="space-y-2">
               <li><a href="#" className="transition-colors" style={{ color: '#6A7B92' }} onMouseEnter={e => (e.currentTarget.style.color = '#A7D129')} onMouseLeave={e => (e.currentTarget.style.color = '#6A7B92')}>Creator Guide</a></li>
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
               <li><a href="#" className="transition-colors" style={{ color: '#6A7B92' }} onMouseEnter={e => (e.currentTarget.style.color = '#A7D129')} onMouseLeave={e => (e.currentTarget.style.color = '#6A7B92')}>Privacy Policy</a></li>
               <li><a href="#" className="transition-colors" style={{ color: '#6A7B92' }} onMouseEnter={e => (e.currentTarget.style.color = '#A7D129')} onMouseLeave={e => (e.currentTarget.style.color = '#6A7B92')}>FAQs</a></li>
             </ul>
-          </div>
+          </div> */}
           
           <div>
             <h3 className="text-lg font-semibold mb-4" style={{ color: '#6A7B92' }}>Subscribe</h3>
