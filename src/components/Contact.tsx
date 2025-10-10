@@ -159,9 +159,8 @@ const Contact: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-semibold mb-2" style={{ color: '#6A7B92' }}>Our Location</h3>
                   <p style={{ color: '#6A7B92' }}>
-                    1234 Media Avenue<br />
-                    Creative District<br />
-                    Los Angeles, CA 90001
+                    1401 21st St Ste R<br />
+                    Sacramento County, CA 95811
                   </p>
                 </div>
               </div>
@@ -197,8 +196,7 @@ const Contact: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-semibold mb-2" style={{ color: '#6A7B92' }}>Call Us</h3>
                   <p style={{ color: '#6A7B92' }}>
-                    +1 (555) 123-4567<br />
-                    +1 (555) 987-6543
+                    +1 (424) 491-5669<br />
                   </p>
                 </div>
               </div>
