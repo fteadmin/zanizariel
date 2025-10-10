@@ -41,7 +41,7 @@ const HeroSlideshow: React.FC = () => {
       },
       // secondaryButton intentionally omitted
       backgroundImage: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2",
-      videoUrl: "https://www.pexels.com/download/video/33940044/",
+      videoUrl: "/assets/sniphero.mp4",
       background: "bg-white",
       backgroundImageDup: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2",
       features: [
@@ -92,7 +92,7 @@ const HeroSlideshow: React.FC = () => {
       <div className="absolute inset-0 overflow-hidden">
         <video
           key={currentSlide}
-            autoPlay
+          autoPlay
           muted
           loop
           playsInline
