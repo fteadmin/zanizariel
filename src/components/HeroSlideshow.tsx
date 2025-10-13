@@ -104,7 +104,7 @@ const HeroSlideshow: React.FC = () => {
         <div
           className="absolute inset-0 transition-opacity duration-700"
           style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.85)',
+            backgroundColor: 'rgba(255, 255, 255, 0.30)',
             zIndex: 2
           }}
         />
