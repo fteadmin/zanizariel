@@ -38,24 +38,24 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20" style={{ backgroundColor: '#6A7B92' }}>
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#6A7B92' }}>Get in Touch</h2>
-          <p className="text-lg" style={{ color: '#6A7B92' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FFFFFF' }}>Get in Touch</h2>
+          <p className="text-lg" style={{ color: '#FFFFFF' }}>
             Ready to collaborate or have questions? We'd love to hear from you.
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 bg-white rounded-xl p-8 border border-[#6A7B92]">
+          <div className="lg:col-span-2 rounded-xl p-8 border" style={{ backgroundColor: '#5A6B82', borderColor: '#A7D129' }}>
             {submitted ? (
               <div className="flex flex-col items-center justify-center h-full py-12">
                 <div className="w-16 h-16 bg-[#A7D129] rounded-full flex items-center justify-center mb-4">
                   <Send className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2" style={{ color: '#6A7B92' }}>Message Sent!</h3>
-                <p className="text-center max-w-md" style={{ color: '#6A7B92' }}>
+                <h3 className="text-2xl font-bold mb-2" style={{ color: '#FFFFFF' }}>Message Sent!</h3>
+                <p className="text-center max-w-md" style={{ color: '#FFFFFF' }}>
                   Thank you for reaching out. We'll get back to you as soon as possible.
                 </p>
               </div>
@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-1" style={{ color: '#6A7B92' }}>Name</label>
+                    <label htmlFor="name" className="block text-sm font-medium mb-1" style={{ color: '#FFFFFF' }}>Name</label>
                     <input
                       id="name"
                       name="name"
@@ -71,11 +71,16 @@ const Contact: React.FC = () => {
                       required
                       value={formState.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-[#6A7B92] bg-white text-[#6A7B92] focus:ring-2 focus:ring-[#A7D129] focus:border-transparent"
+                      className="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-[#A7D129] focus:border-transparent"
+                      style={{ 
+                        backgroundColor: '#4A5568',
+                        borderColor: '#FFFFFF',
+                        color: '#FFFFFF'
+                      }}
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-1" style={{ color: '#6A7B92' }}>Email</label>
+                    <label htmlFor="email" className="block text-sm font-medium mb-1" style={{ color: '#FFFFFF' }}>Email</label>
                     <input
                       id="email"
                       name="email"
@@ -83,32 +88,42 @@ const Contact: React.FC = () => {
                       required
                       value={formState.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-[#6A7B92] bg-white text-[#6A7B92] focus:ring-2 focus:ring-[#A7D129] focus:border-transparent"
+                      className="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-[#A7D129] focus:border-transparent"
+                      style={{ 
+                        backgroundColor: '#4A5568',
+                        borderColor: '#FFFFFF',
+                        color: '#FFFFFF'
+                      }}
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-1" style={{ color: '#6A7B92' }}>Subject</label>
+                  <label htmlFor="subject" className="block text-sm font-medium mb-1" style={{ color: '#FFFFFF' }}>Subject</label>
                   <select
                     id="subject"
                     name="subject"
                     required
                     value={formState.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-[#6A7B92] bg-white text-[#6A7B92] focus:ring-2 focus:ring-[#A7D129] focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-[#A7D129] focus:border-transparent"
+                    style={{ 
+                      backgroundColor: '#4A5568',
+                      borderColor: '#FFFFFF',
+                      color: '#FFFFFF'
+                    }}
                   >
-                    <option value="">Select a subject</option>
-                    <option value="collaboration">Collaboration Opportunity</option>
-                    <option value="services">Services Inquiry</option>
-                    <option value="membership">Membership Information</option>
-                    <option value="press">Press/Media Inquiry</option>
-                    <option value="other">Other</option>
+                    <option value="" style={{ backgroundColor: '#4A5568', color: '#FFFFFF' }}>Select a subject</option>
+                    <option value="collaboration" style={{ backgroundColor: '#4A5568', color: '#FFFFFF' }}>Collaboration Opportunity</option>
+                    <option value="services" style={{ backgroundColor: '#4A5568', color: '#FFFFFF' }}>Services Inquiry</option>
+                    <option value="membership" style={{ backgroundColor: '#4A5568', color: '#FFFFFF' }}>Membership Information</option>
+                    <option value="press" style={{ backgroundColor: '#4A5568', color: '#FFFFFF' }}>Press/Media Inquiry</option>
+                    <option value="other" style={{ backgroundColor: '#4A5568', color: '#FFFFFF' }}>Other</option>
                   </select>
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-1" style={{ color: '#6A7B92' }}>Message</label>
+                  <label htmlFor="message" className="block text-sm font-medium mb-1" style={{ color: '#FFFFFF' }}>Message</label>
                   <textarea
                     id="message"
                     name="message"
@@ -116,7 +131,12 @@ const Contact: React.FC = () => {
                     rows={6}
                     value={formState.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-[#6A7B92] bg-white text-[#6A7B92] focus:ring-2 focus:ring-[#A7D129] focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-[#A7D129] focus:border-transparent resize-none"
+                    style={{ 
+                      backgroundColor: '#4A5568',
+                      borderColor: '#FFFFFF',
+                      color: '#FFFFFF'
+                    }}
                   ></textarea>
                 </div>
                 
@@ -128,16 +148,20 @@ const Contact: React.FC = () => {
                       isSubmitting ? "opacity-75 cursor-not-allowed" : ""
                     }`}
                     style={{
-                      backgroundColor: '#6A7B92',
-                      color: '#FFFFFF'
+                      backgroundColor: '#FFFFFF',
+                      color: '#6A7B92'
                     }}
                     onMouseEnter={e => {
-                      e.currentTarget.style.backgroundColor = '#A7D129';
-                      e.currentTarget.style.color = '#6A7B92';
+                      if (!isSubmitting) {
+                        e.currentTarget.style.backgroundColor = '#A7D129';
+                        e.currentTarget.style.color = '#FFFFFF';
+                      }
                     }}
                     onMouseLeave={e => {
-                      e.currentTarget.style.backgroundColor = '#6A7B92';
-                      e.currentTarget.style.color = '#FFFFFF';
+                      if (!isSubmitting) {
+                        e.currentTarget.style.backgroundColor = '#FFFFFF';
+                        e.currentTarget.style.color = '#6A7B92';
+                      }
                     }}
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
@@ -149,7 +173,7 @@ const Contact: React.FC = () => {
           </div>
           
           <div className="space-y-8">
-            <div className="bg-white rounded-xl p-8 border border-[#6A7B92]">
+            <div className="rounded-xl p-8 border" style={{ backgroundColor: '#5A6B82', borderColor: '#A7D129' }}>
               <div className="flex items-start">
                 <div className="mr-4">
                   <div className="w-12 h-12 bg-[#A7D129] rounded-full flex items-center justify-center">
@@ -157,8 +181,8 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#6A7B92' }}>Our Location</h3>
-                  <p style={{ color: '#6A7B92' }}>
+                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#FFFFFF' }}>Our Location</h3>
+                  <p style={{ color: '#FFFFFF' }}>
                     1401 21st St Ste R<br />
                     Sacramento County, CA 95811
                   </p>
@@ -166,7 +190,7 @@ const Contact: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-white rounded-xl p-8 border border-[#6A7B92]">
+            <div className="rounded-xl p-8 border" style={{ backgroundColor: '#5A6B82', borderColor: '#A7D129' }}>
               <div className="flex items-start">
                 <div className="mr-4">
                   <div className="w-12 h-12 bg-[#A7D129] rounded-full flex items-center justify-center">
@@ -174,11 +198,16 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#6A7B92' }}>Email Us</h3>
+                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#FFFFFF' }}>Email Us</h3>
                   <a 
                     href="mailto:info@zaniyazariel.com" 
-                    className="text-[#6A7B92] hover:text-[#A7D129] transition-colors duration-300 underline-offset-2 hover:underline"
-                    style={{ cursor: 'pointer' }}
+                    className="transition-colors duration-300 underline-offset-2 hover:underline"
+                    style={{ 
+                      color: '#FFFFFF',
+                      cursor: 'pointer'
+                    }}
+                    onMouseEnter={e => (e.currentTarget.style.color = '#A7D129')}
+                    onMouseLeave={e => (e.currentTarget.style.color = '#FFFFFF')}
                   >
                     info@zaniyazariel.com
                   </a>
@@ -186,7 +215,7 @@ const Contact: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-white rounded-xl p-8 border border-[#6A7B92]">
+            <div className="rounded-xl p-8 border" style={{ backgroundColor: '#5A6B82', borderColor: '#A7D129' }}>
               <div className="flex items-start">
                 <div className="mr-4">
                   <div className="w-12 h-12 bg-[#A7D129] rounded-full flex items-center justify-center">
@@ -194,8 +223,8 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#6A7B92' }}>Call Us</h3>
-                  <p style={{ color: '#6A7B92' }}>
+                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#FFFFFF' }}>Call Us</h3>
+                  <p style={{ color: '#FFFFFF' }}>
                     +1 (424) 491-5669<br />
                   </p>
                 </div>

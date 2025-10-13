@@ -45,14 +45,14 @@ const MembershipContent: React.FC = () => {
   ];
 
   return (
-    <section id="membership" className="py-20 bg-white">
+    <section id="membership" className="py-20" style={{ backgroundColor: '#6A7B92' }}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#6A7B92]">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FFFFFF' }}>
             Membership Tiers
           </h2>
-          <p className="text-lg text-[#6A7B92]">
+          <p className="text-lg" style={{ color: '#FFFFFF' }}>
             Choose the membership that fits your creative journey. Whether you're just starting out or ready to lead, 
             we have a tier designed to support your growth and maximize your potential.
           </p>
@@ -65,9 +65,13 @@ const MembershipContent: React.FC = () => {
               key={tier.id}
               className={`relative rounded-2xl p-8 transition-all duration-300 ${
                 tier.featured
-                  ? 'bg-gradient-to-br from-[#6A7B92] to-[#5A6B82] text-white shadow-2xl scale-105'
-                  : 'bg-white border-2 border-[#6A7B92] hover:shadow-xl'
+                  ? 'shadow-2xl scale-105'
+                  : 'border-2 hover:shadow-xl'
               }`}
+              style={{
+                backgroundColor: tier.featured ? '#5A6B82' : '#FFFFFF',
+                borderColor: tier.featured ? 'transparent' : '#FFFFFF'
+              }}
             >
               {tier.featured && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -81,39 +85,38 @@ const MembershipContent: React.FC = () => {
               {/* Tier Header */}
               <div className="text-center mb-6">
                 <div
-                  className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 ${
-                    tier.featured ? 'bg-[#A7D129]' : 'bg-[#A7D129]'
-                  }`}
+                  className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4"
+                  style={{ backgroundColor: '#A7D129' }}
                 >
-                  <div className={tier.featured ? 'text-[#6A7B92]' : 'text-white'}>
+                  <div style={{ color: tier.featured ? '#6A7B92' : '#FFFFFF' }}>
                     {tier.icon}
                   </div>
                 </div>
-                <p className={`text-sm font-semibold mb-2 ${tier.featured ? 'text-[#A7D129]' : 'text-[#6A7B92]'}`}>
+                <p className="text-sm font-semibold mb-2" style={{ color: '#A7D129' }}>
                   {tier.level}
                 </p>
-                <h3 className={`text-2xl md:text-3xl font-bold mb-3 ${tier.featured ? 'text-white' : 'text-[#6A7B92]'}`}>
+                <h3 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: tier.featured ? '#FFFFFF' : '#6A7B92' }}>
                   {tier.name}
                 </h3>
-                <p className={`text-sm italic mb-4 ${tier.featured ? 'text-gray-200' : 'text-[#6A7B92]'}`}>
+                <p className="text-sm italic mb-4" style={{ color: tier.featured ? '#E5E7EB' : '#6A7B92' }}>
                   "{tier.tagline}"
                 </p>
               </div>
 
               {/* Target Audience */}
               <div className="mb-6">
-                <h4 className={`font-semibold mb-2 flex items-center ${tier.featured ? 'text-[#A7D129]' : 'text-[#6A7B92]'}`}>
+                <h4 className="font-semibold mb-2 flex items-center" style={{ color: '#A7D129' }}>
                   <Award className="h-5 w-5 mr-2" />
                   Who It's For:
                 </h4>
-                <p className={`text-sm ${tier.featured ? 'text-gray-200' : 'text-[#6A7B92]'}`}>
+                <p className="text-sm" style={{ color: tier.featured ? '#E5E7EB' : '#6A7B92' }}>
                   {tier.target}
                 </p>
               </div>
 
               {/* Benefits List */}
               <div className="mb-8">
-                <h4 className={`font-semibold mb-4 flex items-center ${tier.featured ? 'text-[#A7D129]' : 'text-[#6A7B92]'}`}>
+                <h4 className="font-semibold mb-4 flex items-center" style={{ color: '#A7D129' }}>
                   <Zap className="h-5 w-5 mr-2" />
                   Benefits:
                 </h4>
@@ -121,11 +124,10 @@ const MembershipContent: React.FC = () => {
                   {tier.benefits.map((benefit, index) => (
                     <li key={index} className="flex items-start">
                       <CheckCircle
-                        className={`h-5 w-5 mr-3 flex-shrink-0 mt-0.5 ${
-                          tier.featured ? 'text-[#A7D129]' : 'text-[#A7D129]'
-                        }`}
+                        className="h-5 w-5 mr-3 flex-shrink-0 mt-0.5"
+                        style={{ color: '#A7D129' }}
                       />
-                      <span className={`text-sm ${tier.featured ? 'text-gray-100' : 'text-[#6A7B92]'}`}>
+                      <span className="text-sm" style={{ color: tier.featured ? '#E5E7EB' : '#6A7B92' }}>
                         {benefit}
                       </span>
                     </li>
@@ -137,11 +139,19 @@ const MembershipContent: React.FC = () => {
               <div className="text-center">
                 <a
                   href="#contact"
-                  className={`inline-block px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
-                    tier.featured
-                      ? 'bg-[#A7D129] text-[#6A7B92] hover:bg-white hover:text-[#6A7B92]'
-                      : 'bg-[#6A7B92] text-white hover:bg-[#A7D129] hover:text-[#6A7B92]'
-                  }`}
+                  className="inline-block px-8 py-3 rounded-full font-semibold transition-all duration-300"
+                  style={{
+                    backgroundColor: tier.featured ? '#A7D129' : '#6A7B92',
+                    color: tier.featured ? '#6A7B92' : '#FFFFFF'
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.backgroundColor = '#FFFFFF';
+                    e.currentTarget.style.color = '#6A7B92';
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.backgroundColor = tier.featured ? '#A7D129' : '#6A7B92';
+                    e.currentTarget.style.color = tier.featured ? '#6A7B92' : '#FFFFFF';
+                  }}
                 >
                   Get Started
                 </a>
@@ -152,12 +162,21 @@ const MembershipContent: React.FC = () => {
 
         {/* Bottom CTA */}
         {/* <div className="text-center mt-16">
-          <p className="text-lg text-[#6A7B92] mb-6">
+          <p className="text-lg mb-6" style={{ color: '#FFFFFF' }}>
             Not sure which tier is right for you?
           </p>
           <a
             href="#quiz"
-            className="inline-flex items-center px-8 py-3 rounded-full font-semibold bg-[#6A7B92] text-white hover:bg-[#A7D129] hover:text-[#6A7B92] transition-all duration-300"
+            className="inline-flex items-center px-8 py-3 rounded-full font-semibold transition-all duration-300"
+            style={{ backgroundColor: '#FFFFFF', color: '#6A7B92' }}
+            onMouseEnter={e => {
+              e.currentTarget.style.backgroundColor = '#A7D129';
+              e.currentTarget.style.color = '#FFFFFF';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.backgroundColor = '#FFFFFF';
+              e.currentTarget.style.color = '#6A7B92';
+            }}
           >
             Take Our 2-Minute Quiz
             <TrendingUp className="ml-2 h-5 w-5" />

@@ -114,7 +114,7 @@ const HeroSlideshow: React.FC = () => {
         <div className="flex items-center justify-center min-h-[600px]">
           <div className="max-w-4xl mx-auto text-center">
             <div className="transition-all duration-700 ease-in-out">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4" style={{ color: '#6A7B92' }}>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4" style={{ color: '#FFFFFF' }}>
                 {slides[currentSlide].title}{' '}
                 <span className="relative">
                   {slides[currentSlide].highlight}
@@ -122,7 +122,7 @@ const HeroSlideshow: React.FC = () => {
                 </span>
               </h1>
 
-              <p className="text-lg md:text-xl my-6 mx-auto max-w-3xl" style={{ color: '#6A7B92' }}>
+              <p className="text-lg md:text-xl my-6 mx-auto max-w-3xl" style={{ color: '#FFFFFF' }}>
                 {slides[currentSlide].description}
               </p>
 
@@ -131,16 +131,16 @@ const HeroSlideshow: React.FC = () => {
                   href={slides[currentSlide].primaryButton.href}
                   className="px-8 py-3 rounded-full font-semibold transition-colors flex items-center justify-center"
                   style={{
-                    backgroundColor: '#6A7B92',
-                    color: '#FFFFFF'
+                    backgroundColor: '#FFFFFF',
+                    color: '#6A7B92'
                   }}
                   onMouseEnter={e => {
                     e.currentTarget.style.backgroundColor = '#A7D129';
-                    e.currentTarget.style.color = '#6A7B92';
+                    e.currentTarget.style.color = '#FFFFFF';
                   }}
                   onMouseLeave={e => {
-                    e.currentTarget.style.backgroundColor = '#6A7B92';
-                    e.currentTarget.style.color = '#FFFFFF';
+                    e.currentTarget.style.backgroundColor = '#FFFFFF';
+                    e.currentTarget.style.color = '#6A7B92';
                   }}
                 >
                   {slides[currentSlide].primaryButton.text}
@@ -154,18 +154,18 @@ const HeroSlideshow: React.FC = () => {
                     rel="noopener noreferrer"
                     className="px-8 py-3 border-2 rounded-full font-semibold transition-colors flex items-center justify-center"
                     style={{
-                      borderColor: '#6A7B92',
-                      color: '#6A7B92'
+                      borderColor: '#FFFFFF',
+                      color: '#FFFFFF'
                     }}
                     onMouseEnter={e => {
                       e.currentTarget.style.backgroundColor = '#A7D129';
-                      e.currentTarget.style.color = '#FFFFFF';
+                      e.currentTarget.style.color = '#6A7B92';
                       e.currentTarget.style.borderColor = '#A7D129';
                     }}
                     onMouseLeave={e => {
                       e.currentTarget.style.backgroundColor = 'transparent';
-                      e.currentTarget.style.color = '#6A7B92';
-                      e.currentTarget.style.borderColor = '#6A7B92';
+                      e.currentTarget.style.color = '#FFFFFF';
+                      e.currentTarget.style.borderColor = '#FFFFFF';
                     }}
                   >
                     {slides[currentSlide].secondaryButton.text}
@@ -181,7 +181,7 @@ const HeroSlideshow: React.FC = () => {
           <button
             onClick={prevSlide}
             className="p-2 rounded-full bg-white/80 backdrop-blur-sm border transition-all duration-300 hover:bg-white"
-            style={{ borderColor: '#6A7B92', color: '#6A7B92' }}
+            style={{ borderColor: '#FFFFFF', color: '#6A7B92' }}
             aria-label="Previous slide"
           >
             <ChevronLeft className="h-5 w-5" />
@@ -198,7 +198,7 @@ const HeroSlideshow: React.FC = () => {
                     : 'hover:opacity-70'
                 }`}
                 style={{
-                  backgroundColor: index === currentSlide ? '#A7D129' : '#6A7B92',
+                  backgroundColor: index === currentSlide ? '#A7D129' : '#FFFFFF',
                   opacity: index === currentSlide ? 1 : 0.5
                 }}
                 aria-label={`Go to slide ${index + 1}`}
@@ -209,7 +209,7 @@ const HeroSlideshow: React.FC = () => {
           <button
             onClick={nextSlide}
             className="p-2 rounded-full bg-white/80 backdrop-blur-sm border transition-all duration-300 hover:bg-white"
-            style={{ borderColor: '#6A7B92', color: '#6A7B92' }}
+            style={{ borderColor: '#FFFFFF', color: '#6A7B92' }}
             aria-label="Next slide"
           >
             <ChevronRight className="h-5 w-5" />
@@ -228,7 +228,7 @@ const HeroSlideshow: React.FC = () => {
             style={{
               backgroundColor: isAutoPlaying ? '#A7D129' : 'transparent',
               color: isAutoPlaying ? '#FFFFFF' : '#6A7B92',
-              borderColor: isAutoPlaying ? '#A7D129' : '#6A7B92'
+              borderColor: isAutoPlaying ? '#A7D129' : '#FFFFFF'
             }}
           >
             {isAutoPlaying ? 'Auto' : 'Manual'}

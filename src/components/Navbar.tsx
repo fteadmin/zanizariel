@@ -34,10 +34,12 @@ const Navbar: React.FC = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-md' : 'bg-white'
-      }`}
-      style={{ borderBottom: scrolled ? '1px solid #6A7B92' : 'none' }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300`}
+      style={{ 
+        backgroundColor: '#6A7B92',
+        borderBottom: scrolled ? '1px solid #FFFFFF' : 'none',
+        boxShadow: scrolled ? '0 4px 6px -1px rgba(0, 0, 0, 0.1)' : 'none'
+      }}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo and Brand */}
@@ -47,7 +49,7 @@ const Navbar: React.FC = () => {
             alt="Zariel & Co Logo" 
             className="h-10 w-auto" 
           />
-          <span className="text-xl font-bold tracking-tight text-[color:#6A7B92]">
+          <span className="text-xl font-bold tracking-tight" style={{ color: '#FFFFFF' }}>
             Zariel & Co Multimedia Partners
           </span>
         </a>
@@ -60,10 +62,10 @@ const Navbar: React.FC = () => {
               href={link.href}
               className="font-semibold transition-colors"
               style={{
-                color: '#6A7B92',
+                color: '#FFFFFF',
               }}
               onMouseEnter={e => (e.currentTarget.style.color = '#A7D129')}
-              onMouseLeave={e => (e.currentTarget.style.color = '#6A7B92')}
+              onMouseLeave={e => (e.currentTarget.style.color = '#FFFFFF')}
             >
               {link.name}
             </a>
@@ -76,7 +78,7 @@ const Navbar: React.FC = () => {
             onClick={toggleMenu} 
             className="ml-4"
             aria-label="Toggle menu"
-            style={{ color: '#6A7B92' }}
+            style={{ color: '#FFFFFF' }}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -85,7 +87,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <nav className="md:hidden bg-white py-4 px-6 shadow-lg">
+        <nav className="md:hidden py-4 px-6 shadow-lg" style={{ backgroundColor: '#6A7B92' }}>
           <div className="flex flex-col space-y-4">
             {navLinks.map((link) => (
               <a
@@ -93,10 +95,10 @@ const Navbar: React.FC = () => {
                 href={link.href}
                 className="font-semibold transition-colors"
                 style={{
-                  color: '#6A7B92',
+                  color: '#FFFFFF',
                 }}
                 onMouseEnter={e => (e.currentTarget.style.color = '#A7D129')}
-                onMouseLeave={e => (e.currentTarget.style.color = '#6A7B92')}
+                onMouseLeave={e => (e.currentTarget.style.color = '#FFFFFF')}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
