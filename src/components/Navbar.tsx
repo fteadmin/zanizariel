@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -23,13 +25,15 @@ const Navbar: React.FC = () => {
     };
   }, [scrolled]);
 
+  const isGigsPage = location.pathname === '/gigs';
+
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Membership', href: '#membership' },
-    { name: 'Services', href: '#services' },
-    // { name: 'Scripted', href: '#scripted' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', href: isGigsPage ? '/' : '#home' },
+    { name: 'About', href: isGigsPage ? '/#about' : '#about' },
+    { name: 'Membership', href: isGigsPage ? '/#membership' : '#membership' },
+    { name: 'Services', href: isGigsPage ? '/#services' : '#services' },
+    { name: 'Contact', href: isGigsPage ? '/#contact' : '#contact' },
+    { name: 'Gigs', href: '/gigs' }
   ];
 
   return (
@@ -43,7 +47,7 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo and Brand */}
-        <a href="#home" className="flex items-center space-x-2">
+        <a href="/" className="flex items-center space-x-2">
           <img 
             src="/assets/logo-light.png" 
             alt="Zariel & Co Logo" 

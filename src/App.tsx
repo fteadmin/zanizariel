@@ -1,17 +1,13 @@
 import React, { useEffect } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
-// import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
 import MembershipContent from './components/MembershipContent';
-// import Scripted from './components/Scripted';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SmoothScroll from './components/SmoothScroll';
 import HeroSlideshow from './components/HeroSlideshow';
-
-
 
 function App() {
   useEffect(() => {
@@ -26,11 +22,9 @@ function App() {
         <Navbar />
         <main>
           <HeroSlideshow />
-          {/* <Hero /> */}
           <About />
-           <MembershipContent />
+          <MembershipContent />
           <Services />
-          {/* <Scripted /> */}
           <Contact />
         </main>
         <Footer />

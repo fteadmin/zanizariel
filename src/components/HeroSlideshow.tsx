@@ -13,12 +13,9 @@ const HeroSlideshow: React.FC = () => {
       description: "At Zariel & Co, we're not just in the business of creating content - we're building a community of creators, collaborators, and innovators.",
       primaryButton: {
         text: "Learn More",
-        href: "#about"
+        href: "#contact"
       },
-      secondaryButton: {
-        text: "Take the 2-Minute Quiz",
-        href: "https://forms.office.com/r/kfkCSMGwxq"
-      },
+      // secondaryButton removed from this slide
       backgroundImage: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2",
       videoUrl: "https://videos.pexels.com/video-files/3209828/3209828-uhd_2560_1440_25fps.mp4",
       background: "bg-white",
@@ -35,11 +32,11 @@ const HeroSlideshow: React.FC = () => {
       title: "Booked",
       highlight: "& Busy",
       description: "A 2-year creator incubator that turns your talent into a business—real tools, real ownership, real money.",
-      primaryButton: {
-        text: "Learn More",
-        href: "#about"
+      // primaryButton removed from this slide
+      secondaryButton: {
+        text: "Take the 2-Minute Quiz",
+        href: "https://forms.office.com/r/kfkCSMGwxq"
       },
-      // secondaryButton intentionally omitted
       backgroundImage: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2",
       videoUrl: "/assets/sniphero.mp4",
       background: "bg-white",
@@ -127,25 +124,27 @@ const HeroSlideshow: React.FC = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
-                <a
-                  href={slides[currentSlide].primaryButton.href}
-                  className="px-8 py-3 rounded-full font-semibold transition-colors flex items-center justify-center"
-                  style={{
-                    backgroundColor: '#FFFFFF',
-                    color: '#6A7B92'
-                  }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.backgroundColor = '#A7D129';
-                    e.currentTarget.style.color = '#FFFFFF';
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.backgroundColor = '#FFFFFF';
-                    e.currentTarget.style.color = '#6A7B92';
-                  }}
-                >
-                  {slides[currentSlide].primaryButton.text}
-                  <ArrowRight className="ml-2 h-5 w-5" style={{ color: '#A7D129' }} />
-                </a>
+                {slides[currentSlide].primaryButton && (
+                  <a
+                    href={slides[currentSlide].primaryButton.href}
+                    className="px-8 py-3 rounded-full font-semibold transition-colors flex items-center justify-center"
+                    style={{
+                      backgroundColor: '#FFFFFF',
+                      color: '#6A7B92'
+                    }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.backgroundColor = '#A7D129';
+                      e.currentTarget.style.color = '#FFFFFF';
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.backgroundColor = '#FFFFFF';
+                      e.currentTarget.style.color = '#6A7B92';
+                    }}
+                  >
+                    {slides[currentSlide].primaryButton.text}
+                    <ArrowRight className="ml-2 h-5 w-5" style={{ color: '#A7D129' }} />
+                  </a>
+                )}
 
                 {slides[currentSlide].secondaryButton && (
                   <a
