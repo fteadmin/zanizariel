@@ -39,7 +39,7 @@ const About: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold mb-4" style={{ color: '#FFFFFF' }}>Driving Innovation</h3>
             <p style={{ color: '#FFFFFF' }}>
-              We believe that innovation is the key to unlocking new opportunities in the media industry.
+              We are a hybrid business incubator and consultancy firm designed for innovators and creators ready to grow bold ideas into thriving ventures. We blend strategy with creativity—offering mentorship, resources, and hands-on guidance to help startups refine their vision, scale with purpose, and make real impact.
             </p>
           </div>
         </div>
