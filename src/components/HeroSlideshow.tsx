@@ -15,7 +15,6 @@ const HeroSlideshow: React.FC = () => {
         text: "Learn More",
         href: "#contact"
       },
-      // secondaryButton removed from this slide
       backgroundImage: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2",
       videoUrl: "https://videos.pexels.com/video-files/3209828/3209828-uhd_2560_1440_25fps.mp4",
       background: "bg-white",
@@ -32,7 +31,6 @@ const HeroSlideshow: React.FC = () => {
       title: "Booked",
       highlight: "& Busy",
       description: "A 2-year creator incubator that turns your talent into a business—real tools, real ownership, real money.",
-      // primaryButton removed from this slide
       secondaryButton: {
         text: "Take the 2-Minute Quiz",
         href: "https://forms.office.com/r/kfkCSMGwxq"
@@ -77,31 +75,30 @@ const HeroSlideshow: React.FC = () => {
     <section
       id="home"
       className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(${slides[currentSlide].backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        transition: 'background-image 0.7s ease-in-out'
-      }}
     >
-      {/* Background Video */}
+      {/* Background Videos - All rendered but only one visible at a time */}
       <div className="absolute inset-0 overflow-hidden">
-        <video
-          key={currentSlide}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
-          style={{ zIndex: 1 }}
-        >
-          <source src={slides[currentSlide].videoUrl} type="video/mp4" />
-        </video>
+        {slides.map((slide, index) => (
+          <video
+            key={slide.id}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+            style={{ 
+              zIndex: 1,
+              opacity: index === currentSlide ? 1 : 0,
+              pointerEvents: index === currentSlide ? 'auto' : 'none'
+            }}
+          >
+            <source src={slide.videoUrl} type="video/mp4" />
+          </video>
+        ))}
         <div
-          className="absolute inset-0 transition-opacity duration-700"
+          className="absolute inset-0"
           style={{
-            backgroundColor: 'rgba(255, 255, 255))',
+            backgroundColor: 'rgba(0, 0, 0, 0.3)',
             zIndex: 2
           }}
         />
