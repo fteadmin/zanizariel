@@ -15,8 +15,8 @@ const Services: React.FC = () => {
     },
     {
       icon: <Users className="h-8 w-8" style={{ color: '#FFFFFF' }} />,
-      title: "Community Building",
-      description: "Strategies and tools to build and nurture engaged communities around your content.",
+      title: "Consulting & Managing",
+      description: "A consulting and management firm dedicated to helping businesses refine strategy, streamline operations, and grow with purpose and creativity.",
     }
   ];
 
