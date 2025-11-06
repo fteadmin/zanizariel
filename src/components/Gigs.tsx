@@ -16,7 +16,7 @@ const Gigs: React.FC = () => {
         "A shared commitment to celebrating women's experiences and achievements"
       ],
       energy: "They bring a balance of energy and depth — one may lead with bold ideas and curiosity, while the other grounds the discussion with empathy and reflection. Their synergy creates a welcoming, inspiring atmosphere that celebrates the power of women's voices and the beauty of diverse journeys.",
-      image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "https://images.pexels.com/photos/6954174/pexels-photo-6954174.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 2,
@@ -31,7 +31,8 @@ const Gigs: React.FC = () => {
         "Inspires trust, openness, and connection"
       ],
       energy: "He's the kind of host who makes listeners feel safe to be honest, inspired to grow, and proud to be themselves. His voice is steady and thoughtful — the anchor for a show that celebrates achievement without ego, and emotion without shame. Each episode feels like a real conversation between men who are learning, leading, and evolving — together.",
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "https://images.pexels.com/photos/935949/pexels-photo-935949.jpeg?auto=compress&cs=tinysrgb&w=800"
+
     },
     {
       id: 3,
@@ -45,7 +46,8 @@ const Gigs: React.FC = () => {
         "Embody both the strength and softness of feminine energy"
       ],
       energy: "Together, they create an atmosphere that's lush, elegant, and soulful — a celebration of womanhood that feels like brunch with your closest friends and mentors. The tone is intimate but elevated; laughter meets reflection, and every episode feels like nourishment for the spirit.",
-      image: "https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "https://images.pexels.com/photos/1181717/pexels-photo-1181717.jpeg?auto=compress&cs=tinysrgb&w=800"
+
     },
     {
       id: 4,
