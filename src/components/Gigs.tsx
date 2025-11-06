@@ -31,7 +31,7 @@ const Gigs: React.FC = () => {
         "Inspires trust, openness, and connection"
       ],
       energy: "He's the kind of host who makes listeners feel safe to be honest, inspired to grow, and proud to be themselves. His voice is steady and thoughtful — the anchor for a show that celebrates achievement without ego, and emotion without shame. Each episode feels like a real conversation between men who are learning, leading, and evolving — together.",
-      image: "https://images.pexels.com/photos/3771069/pexels-photo-3771069.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 3,
@@ -55,7 +55,7 @@ const Gigs: React.FC = () => {
       image: "https://images.pexels.com/photos/4056535/pexels-photo-4056535.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
-      id: 5,
+      id: 5, 
       title: "Promotional Model",
       icon: <Briefcase className="h-8 w-8" />,
       description: "Looking for charismatic promotional models to represent our brand at events and campaigns.",
