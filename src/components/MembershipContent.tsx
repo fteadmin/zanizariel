@@ -7,11 +7,12 @@ const MembershipContent: React.FC = () => {
       id: 1,
       name: "Creator Membership",
       level: "Tier 1",
+      price: "$500",
       target: "Early-career creators, freelancers, and collaborators looking to grow, learn, and network.",
       tagline: "Growth, skill-building, and initial earning potential",
       icon: <Users className="h-8 w-8" />,
       benefits: [
-        "Starter pack of Z&Z digital coins",
+        "Grow social media outreach to 5,000 followers on TikTok",
         "Discounted access to studio time, equipment, and software",
         "Networking opportunities (events, workshops, masterclasses)",
         "Collaboration opportunities with other members",
@@ -23,13 +24,14 @@ const MembershipContent: React.FC = () => {
       id: 2,
       name: "Innovator Membership",
       level: "Tier 2",
+      price: "$5,000",
       target: "More advanced creators, project leads, and entrepreneurial members looking for maximum return, influence, and resources.",
       tagline: "Leadership, influence, and higher earnings potential",
       icon: <Crown className="h-8 w-8" />,
       benefits: [
         "Everything in Creator tier",
         "Profit share (based on contributions)",
-        "Expanded + bonus Z&Z digital coins annually",
+        "Grow social media outreach to 2,500 followers (Instagram & TikTok)",
         "Priority access to resources (studio time, equipment, tools)",
         "Advanced project management tools",
         "One-on-one mentorship with industry veterans",
@@ -41,6 +43,23 @@ const MembershipContent: React.FC = () => {
         "2-year Incubation Program (Business Development and Wealth Management)"
       ],
       featured: true
+    },
+    {
+      id: 3,
+      name: "Visionary Partners",
+      level: "Tier 3",
+      price: "$25,000",
+      target: "Brand partnerships for those who have their own media company. Fully developed media companies ready to scale and partner on projects.",
+      tagline: "Strategic partnerships, capital access, and large-scale opportunities",
+      icon: <Star className="h-8 w-8" />,
+      benefits: [
+        "Everything in Innovator tier",
+        "Access to investors for projects — FTE commits to fund one project per year",
+        "Priority brand partnership matchmaking",
+        "Dedicated partnership manager",
+        "Co-marketing and distribution support"
+      ],
+      featured: false
     }
   ];
 
@@ -59,7 +78,7 @@ const MembershipContent: React.FC = () => {
         </div>
 
         {/* Membership Tiers */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {tiers.map((tier) => (
             <div
               key={tier.id}
@@ -73,6 +92,19 @@ const MembershipContent: React.FC = () => {
                 borderColor: tier.featured ? 'transparent' : '#FFFFFF'
               }}
             >
+              {tier.price && (
+                <div className="absolute top-4 right-4">
+                  <span
+                    className="px-3 py-1 rounded-full text-sm font-bold"
+                    style={{
+                      backgroundColor: tier.featured ? '#A7D129' : '#6A7B92',
+                      color: tier.featured ? '#6A7B92' : '#FFFFFF'
+                    }}
+                  >
+                    {tier.price}
+                  </span>
+                </div>
+              )}
               {tier.featured && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-[#A7D129] text-[#6A7B92] px-4 py-1 rounded-full text-sm font-semibold flex items-center">
@@ -95,9 +127,10 @@ const MembershipContent: React.FC = () => {
                 <p className="text-sm font-semibold mb-2" style={{ color: '#A7D129' }}>
                   {tier.level}
                 </p>
-                <h3 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: tier.featured ? '#FFFFFF' : '#6A7B92' }}>
+                <h3 className="text-2xl md:text-3xl font-bold mb-1" style={{ color: tier.featured ? '#FFFFFF' : '#6A7B92' }}>
                   {tier.name}
                 </h3>
+                {/* Price moved to top-right badge */}
                 <p className="text-sm italic mb-4" style={{ color: tier.featured ? '#E5E7EB' : '#6A7B92' }}>
                   "{tier.tagline}"
                 </p>
