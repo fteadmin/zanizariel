@@ -4,6 +4,13 @@ import { Mic, Users, Heart, Dumbbell, Briefcase, Wine } from 'lucide-react';
 const Gigs: React.FC = () => {
   const gigs = [
     {
+      id: 6,
+      title: "Hostess, Servers, Promo models,  & Utility crew",
+      icon: <Wine className="h-8 w-8" />,
+      description: "Join our team of professional hosts, bartenders, and servers to create unforgettable experiences at our exclusive events.",
+      image: "/assets/book.png"
+    },
+    {
       id: 1,
       title: "Two Female Hosts for Para Ti",
       icon: <Users className="h-8 w-8" />,
