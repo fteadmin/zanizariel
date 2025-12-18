@@ -31,7 +31,7 @@ const MembershipContent: React.FC = () => {
       benefits: [
         "Everything in Creator tier",
         "Profit share (based on contributions)",
-        "Grow social media outreach to 2,500 followers (Instagram & TikTok)",
+        "Grow social media outreach to 25,000 followers (Instagram & TikTok)",
         "Priority access to resources (studio time, equipment, tools)",
         "Advanced project management tools",
         "One-on-one mentorship with industry veterans",

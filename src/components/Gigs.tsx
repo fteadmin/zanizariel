@@ -146,26 +146,29 @@ const Gigs: React.FC = () => {
                     </div>
                   )}
 
-                  <div className="mt-6">
-                    <a
-                      href={`mailto:info@zaniyazariel.com?subject=Application for ${gig.title}&body=Hi, I'm interested in applying for the ${gig.title} position.`}
-                      className="inline-block px-6 py-3 rounded-full font-semibold transition-colors"
-                      style={{
-                        backgroundColor: '#FFFFFF',
-                        color: '#6A7B92'
-                      }}
-                      onMouseEnter={e => {
-                        e.currentTarget.style.backgroundColor = '#A7D129';
-                        e.currentTarget.style.color = '#FFFFFF';
-                      }}
-                      onMouseLeave={e => {
-                        e.currentTarget.style.backgroundColor = '#FFFFFF';
-                        e.currentTarget.style.color = '#6A7B92';
-                      }}
-                    >
-                      Apply Now
-                    </a>
-                  </div>
+                  {/* Apply button temporarily disabled per request */}
+                  {false && (
+                    <div className="mt-6">
+                      <a
+                        href={`mailto:info@zaniyazariel.com?subject=Application for ${gig.title}&body=Hi, I'm interested in applying for the ${gig.title} position.`}
+                        className="inline-block px-6 py-3 rounded-full font-semibold transition-colors"
+                        style={{
+                          backgroundColor: '#FFFFFF',
+                          color: '#6A7B92'
+                        }}
+                        onMouseEnter={e => {
+                          e.currentTarget.style.backgroundColor = '#A7D129';
+                          e.currentTarget.style.color = '#FFFFFF';
+                        }}
+                        onMouseLeave={e => {
+                          e.currentTarget.style.backgroundColor = '#FFFFFF';
+                          e.currentTarget.style.color = '#6A7B92';
+                        }}
+                      >
+                        Apply Now
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
